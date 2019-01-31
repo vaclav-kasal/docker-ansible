@@ -9,3 +9,6 @@ RUN apt-get install -y ansible
 RUN apt-get install -y ssh
 RUN mkdir /root/.ssh && chmod 700 /root/.ssh
 RUN echo "Host *\nStrictHostKeyChecking no" >> /root/.ssh/config
+
+# ansible vault requires vi
+RUN apt-get install -y vim
