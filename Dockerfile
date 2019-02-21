@@ -12,3 +12,7 @@ RUN echo "Host *\nStrictHostKeyChecking no" >> /root/.ssh/config
 
 # ansible vault requires vi
 RUN apt-get install -y vim
+
+#digital ocean requires dopy that is available through pip
+RUN apt-get install -y python-pip
+RUN pip install dopy
