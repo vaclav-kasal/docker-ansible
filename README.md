@@ -1,5 +1,21 @@
 # docker-ansible
 
-docker run -it --rm vaclavkasal/ansible -v <ansible playbook directory>:/ansible ansible/<playbook.yml>
+## example
+```bash
+docker run -it --rm vaclavkasal/ansible -v /ansible/:/ansible ansible/playbooks/client1-webhosting1.yml
+```
 
-license: WTFPL
+## config example
+```yaml
+[defaults]
+retry_files_enabled = False
+callback_whitelist = profile_tasks
+strategy_plugins = /root/mitogen/ansible_mitogen/plugins/strategy
+strategy = mitogen_linear
+
+[ssh_connection]
+pipelining = True
+```
+
+## license
+WTFPL
