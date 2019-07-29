@@ -2,7 +2,7 @@
 
 ## example
 ```bash
-docker run -it --rm vaclavkasal/ansible -v /ansible/:/ansible ansible/playbooks/client1-webhosting1.yml
+docker run -it --rm vaclavkasal/ansible -e ANSIBLE_CONFIG='/ansible/config.cfg' -v /ansible/:/ansible  /ansible/playbooks/client1-webhosting1.yml
 ```
 
 ## config example
