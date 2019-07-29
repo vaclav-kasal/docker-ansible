@@ -10,11 +10,9 @@ docker run -it --rm vaclavkasal/ansible -v /ansible/:/ansible ansible/playbooks/
 [defaults]
 retry_files_enabled = False
 callback_whitelist = profile_tasks
-strategy_plugins = /root/mitogen/ansible_mitogen/plugins/strategy
+strategy_plugins = /opt/mitogen/ansible_mitogen/plugins/strategy
 strategy = mitogen_linear
-
-[ssh_connection]
-pipelining = True
+host_key_checking = False
 ```
 
 ## license
