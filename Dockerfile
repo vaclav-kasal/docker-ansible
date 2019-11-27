@@ -20,7 +20,7 @@ RUN apt-get install -y python-pip
 RUN pip install dopy
 
 # mitogen
-RUN wget https://networkgenomics.com/try/mitogen-0.2.7.tar.gz -O /opt/mitogen.tar.gz
+RUN wget https://networkgenomics.com/try/mitogen-0.2.9.tar.gz -O /opt/mitogen.tar.gz
 RUN tar -xf /opt/mitogen.tar.gz -C /opt/
 RUN rm /opt/mitogen.tar.gz
 RUN mv /opt/mitogen-* /opt/mitogen/
