@@ -24,3 +24,7 @@ RUN wget https://networkgenomics.com/try/mitogen-0.2.7.tar.gz -O /opt/mitogen.ta
 RUN tar -xf /opt/mitogen.tar.gz -C /opt/
 RUN rm /opt/mitogen.tar.gz
 RUN mv /opt/mitogen-* /opt/mitogen/
+
+# requirements download from git requires git module
+RUN apt-get update && apt-get install -y git
+RUN apt-get upgrade -y
