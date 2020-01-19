@@ -28,3 +28,6 @@ RUN mv /opt/mitogen-* /opt/mitogen/
 # requirements download from git requires git module
 RUN apt-get update && apt-get install -y git
 RUN apt-get upgrade -y
+
+# google DNS
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
