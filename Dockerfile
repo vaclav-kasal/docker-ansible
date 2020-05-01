@@ -2,6 +2,7 @@ FROM ubuntu
 
 # install ansible
 RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get install -y software-properties-common
 RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update
@@ -26,8 +27,7 @@ RUN rm /opt/mitogen.tar.gz
 RUN mv /opt/mitogen-* /opt/mitogen/
 
 # requirements download from git requires git module
-RUN apt-get update && apt-get install -y git
-RUN apt-get upgrade -y
+RUN apt-get update && apt-get install -y git python-git
 
 # google DNS
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
